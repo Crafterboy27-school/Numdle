@@ -37,6 +37,10 @@ async function game() {
         alert("Guess must be 3 digits exactly!")
         return
       }
+      if(!/^\d+$/.test(input.toString())){
+        alert("Guess must be a positive number!")
+        return
+      }
     
       rows[guess][0] = input
     let i = 0
