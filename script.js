@@ -54,6 +54,7 @@ async function game() {
       }
     
       guess++
+      document.getElementById("guess").value=""
       document.getElementById("form").onsubmit = ()=>{}
       setTimeout(() => {
         document.getElementById("form").onsubmit = submit
