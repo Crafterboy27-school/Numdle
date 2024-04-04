@@ -74,6 +74,7 @@ async function game() {
   document.getElementById("form").onsubmit = submit
 }
 document.getElementById("new").onclick=()=>{
-  game()
+  let a = prompt("Are you sure you want to start a new game? (y/n)")
+  if(a.toLowerCase()[0]==="y")  game()
 }
 game()
