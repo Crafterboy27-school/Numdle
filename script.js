@@ -22,7 +22,7 @@ async function game() {
         return
       }
       if (guess >= 8) {
-        alert("No more guesses!")
+        alert("No more guesses! The answer was: "+answer)
         return
       }
       let input = document.getElementById("guess").value
