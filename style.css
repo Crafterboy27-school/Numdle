@@ -6,3 +6,8 @@ html {
 .won>*{
   background-color:lime!important;
 }
+
+#new{
+  position:absolute;
+  bottom:0;
+}
