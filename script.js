@@ -13,7 +13,14 @@ async function game() {
   }
 
   var guess = 0
-  var answer = rnd(100,999)
+  var answer = ""
+  var nums = ['0','1',"2","3","4","5","6","7","8","9"]
+
+  answer = nums.splice(rnd(0,nums.length),1)[0]+nums.splice(rnd(0,nums.length),1)[0]+nums.splice(rnd(0,nums.length),1)[0]
+  
+  answer = parseFloat(answer)
+
+  
   var win = false
   const submit = async (e) => {
       e.preventDefault()
