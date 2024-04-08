@@ -1,27 +1,9 @@
 var rnd = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-const urlParams = new URLSearchParams(window.location.search);
-const seedParam = urlParams.get('seed');
-
-function stringToCharCodes(str) {
-  let codes = "_"
-  for (i in str) {
-    codes += str.charCodeAt(i)
-  }
-  return codes
-}
 
 async function game(seedStart = rnd(0, 10000)) {
+
   var seed = seedStart
-  let random = () => {
-    var x = Math.sin(seed++) * 10000;
-    return x - Math.floor(x);
-  }
-
-  var rndSeed = (min, max) => Math.floor(random() * (max - min)) + min;
-
-  if (seedParam !== null) {
-    seed = parseFloat(stringToCharCodes(seedParam))
-  }
+  var rndSeed = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 
 
@@ -42,7 +24,7 @@ async function game(seedStart = rnd(0, 10000)) {
   var nums = ['0', '1', "2", "3", "4", "5", "6", "7", "8", "9"]
 
   while (answer.length != 3) {
-    answer += nums.splice(rndSeed(0, nums.length), 1)[0]
+    answer += nums.splice(rnd(0, nums.length), 1)[0]
   }
 
 
