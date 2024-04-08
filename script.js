@@ -16,7 +16,10 @@ async function game() {
   var answer = ""
   var nums = ['0','1',"2","3","4","5","6","7","8","9"]
 
-  answer = nums.splice(rnd(0,nums.length),1)[0]+nums.splice(rnd(0,nums.length),1)[0]+nums.splice(rnd(0,nums.length),1)[0]
+  while(answer.length!=3){
+    answer+=nums.splice(rnd(0,nums.length),1)[0]
+  }
+  
   
   answer = parseFloat(answer)
 
