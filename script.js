@@ -41,9 +41,12 @@ async function game(seedStart = rnd(0, 10000)) {
   var guess = 0
   var answer = ""
   var nums = ['0', '1', "2", "3", "4", "5", "6", "7", "8", "9"]
-  while (parseFloat(answer) <= 100) {
-    answer += nums.splice(rndSeed(0, nums.length), 1)[0]
+
+  while (answer.replaceAll("a", "").length != 3) {
+    answer += nums.splice(rndSeed(0, nums.length), 1)[0] + "a"
+    console.lo
   }
+  answer = answer.replaceAll("a", "")
   console.log(answer.length)
 
 
@@ -95,10 +98,6 @@ async function game(seedStart = rnd(0, 10000)) {
     }
 
     guess++
-    if (guess >= 8) {
-      alert("No more guesses! The answer was: " + answer)
-      return
-    }
     document.getElementById("guess").value = ""
     document.getElementById("form").onsubmit = () => { }
     setTimeout(() => {
