@@ -41,9 +41,10 @@ async function game(seedStart = rnd(0, 10000)) {
   var guess = 0
   var answer = ""
   var nums = ['0', '1', "2", "3", "4", "5", "6", "7", "8", "9"]
-  while (parseFloat(answer) <= 99 || answer == "") {
+  while (answer.length != 3 || answer == "") {
     answer += nums.splice(rndSeed(0, nums.length), 1)[0]
   }
+
   console.log(answer.length)
   console.log(answer)
 
