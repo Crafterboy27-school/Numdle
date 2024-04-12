@@ -10,7 +10,7 @@ html {
 #new {
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 
 .overtime>* {
@@ -20,5 +20,5 @@ html {
 .github {
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
 }
