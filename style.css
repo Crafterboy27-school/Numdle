@@ -3,11 +3,22 @@ html {
   width: 100%;
 }
 
-.won>*{
-  background-color:lime!important;
+.won>* {
+  background-color: lime !important;
 }
 
-#new{
-  position:absolute;
-  bottom:0;
+#new {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.overtime>* {
+  background-color: red !important;
+}
+
+.github {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
