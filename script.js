@@ -21,7 +21,7 @@ async function game(seedStart = rnd(0, 10000)) {
 
   var rndSeed = (min, max) => Math.floor(random() * (max - min)) + min;
 
-  if (seedParam !== null || seedParam !== "") {
+  if (seedParam !== null && seedParam !== "") {
     seed = parseFloat(stringToCharCodes(seedParam))
     document.getElementById("seed").textContent = seedParam
     document.getElementById("seedInput").value = seedParam
