@@ -25,6 +25,8 @@ async function game(seedStart = rnd(0, 10000)) {
     seed = parseFloat(stringToCharCodes(seedParam))
     document.getElementById("seed").textContent = seedParam
     document.getElementById("seedInput").value = seedParam
+  } else {
+    document.getElementById("seedDisplay").style.display = "none"
   }
 
 
