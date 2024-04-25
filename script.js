@@ -21,9 +21,10 @@ async function game(seedStart = rnd(0, 10000)) {
 
   var rndSeed = (min, max) => Math.floor(random() * (max - min)) + min;
 
-  if (seedParam !== null) {
+  if (seedParam !== null || seedParam !== "") {
     seed = parseFloat(stringToCharCodes(seedParam))
-    console.log("Seed: " + seed)
+    document.getElementById("seed").textContent = seedParam
+    document.getElementById("seedInput").value = seedParam
   }
 
 
@@ -47,8 +48,8 @@ async function game(seedStart = rnd(0, 10000)) {
     answer += nums.splice(rndSeed(0, nums.length), 1)[0]
   }
 
-  console.log(answer.length)
-  console.log(answer)
+  // console.log(answer.length)
+  // console.log(answer)
 
 
   answer = parseFloat(answer)
@@ -113,7 +114,9 @@ async function game(seedStart = rnd(0, 10000)) {
 }
 document.getElementById("new").onclick = () => {
   let a = prompt("Are you sure you want to start a new game? (y/n)")
-  if (a.toLowerCase()[0] === "y") game()
+  if (a.toLowerCase()[0] === "y") {
+    window.location.assign("./?seed=" + encodeURIComponent(document.getElementById("seedInput").value))
+  }
 }
 game()
 
