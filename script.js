@@ -7,6 +7,7 @@ function stringToCharCodes(str) {
   for (i in str) {
     codes += str.charCodeAt(i)
   }
+  codes = codes.replaceAll("_", "")
   return codes
 }
 
@@ -22,6 +23,7 @@ async function game(seedStart = rnd(0, 10000)) {
 
   if (seedParam !== null) {
     seed = parseFloat(stringToCharCodes(seedParam))
+    console.log("Seed: " + seed)
   }
 
 
