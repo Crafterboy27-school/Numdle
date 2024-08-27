@@ -3,6 +3,13 @@ html {
   width: 100%;
 }
 
+body{
+  background-color:black;
+}
+*{
+  color: white;
+}
+
 .won>* {
   background-color: lime !important;
 }
