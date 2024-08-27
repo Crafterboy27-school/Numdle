@@ -41,10 +41,10 @@ body{
 }
 
 button{
-  background-color: #a1a1a1;
+  background-color: #545454;
 }
 input{
-  background-color: #a1a1a1;
+  background-color: #545454;
 }
 input::placeholder{
   color: #c2c2c2;
