@@ -3,9 +3,6 @@ html {
   width: 100%;
 }
 
-body{
-  background-color:black;
-}
 *{
   color: white;
 }
@@ -40,13 +37,19 @@ body{
   font-size: 3vmin;
 }
 
-button{
-  background-color: #545454;
+
+
+@media (prefers-color-scheme: dark) {
+  button{
+    background-color: #545454;
+  }
+  input{
+    background-color: #545454;
+  }
+  input::placeholder{
+    color: #c2c2c2;
+  }
+  body{
+  background-color:black;
 }
-input{
-  background-color: #545454;
-}
-input::placeholder{
-  color: #c2c2c2;
-  
 }
