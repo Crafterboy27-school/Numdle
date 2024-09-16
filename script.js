@@ -1,3 +1,7 @@
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // dark mode
+    document.getElementById("table").["data-bs-theme"]="dark"
+}
 var rnd = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const urlParams = new URLSearchParams(window.location.search);
 const seedParam = urlParams.get('seed');
