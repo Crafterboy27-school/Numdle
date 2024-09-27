@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheelbarrow</title>
+</head>
+<body style="margin: 0;">
+<!--         <button onclick="alert(localStorage.getItem('key'))">Show Key</button> -->
+        <p>Contact me at unluckycrafter5@gmail.com</p>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript">
+            // Make it a little harder for GoGuardian people to patch it based off my code by encrypting it.
+            let code = atob(`VTJGc2RHVmtYMTkvb0RIWmZkWlYyUURITk9Jc0JFVzNJYlAzRlhwdERqdGh6bElpWENwc1E5dDRwcE04WTR4YXBnQjN4OFErSXAxMmh4UXd1eXlhdEFJYTFLRWprZFAyV0Vzc01yVjhFUXBJL0J5bWloaVhDTjVyUmNUUGd0TWhVWmtYQzRET1JvVXRPSGZ1QTdzc3loSGNTY2Z0bEUvaFAzWGNYeG5ZK0V5RnV6SXpjR1JaelJDUkZ6Nk9RbVV6bkVOcFZlbisycXYvL2ViZnZneDFlejRSQ2JJQUQ5OWtwR09HZy9ycGhpVGdwWEc5NldYMmI2YlZ4aWltaGFoMm9mMzhFd2JqbXBPNWxZSlhPZzhsKzV2K004cGREQ3FpR3ZRTE9DeWNnTFNRTGhXeTBNeWQ1dHNKMXY5TzJxTHBRQVBhL1N3eUtuV0lPUlhTMEhVem9ESGRFU3AxcG1rRzc5NHFSVTlDV3ZjdGJZTnpZU3FkWVZSQ2EyQU5NaGZEZ0ZSWm1TV0dIWjQ5dENTRnBVcTJXc3FZTCtkTFhlQ0tzbytuSVZlV0NzbHI4a205dmNPbThMb1dnTDRWYVV3bXI2ZzlXdFZrWTVoMVh0Q3haMU91TmlpdStXeFNISFVLbXUxTUVDdmQ4SWNFcW5SSi9ROUtJdlJSY255UitsUHJrclFXQ011WTRPa1lmZjllSWZTcHpWSjJYM0RGa2pkZXFzTnpoMFFqQk80KzlFOE9kWXhVS0FNbGdpWUtyaCsrQktaUnNMczQ4OU5JTVBXNG14R04rV1U3TVlVdms4S0xGckIxWGpKZ2lqR1ZwbWlaYzI5dUovWDh4c3F1TlFUeG9mQmdmQVRyYnFFNmpkRUVUU1g3TzkzNkF1OUNXcGdQWFlCdkVDZW90YlRHTitPeXMyYTdBcjkwR3FhTXFYMHdRam1TREVzdHZSa003QkdJZnJoOTZDZHl4R2pDa056WlNWaXUwckovRnFNc2ZGMWlSTHFFSWxmT2ZKdm4vbUtKWk52cHpOM25BaGxhZHhGWmFLaThsQjhibU0vSkVhMEtJQy9qM0tHZHI2NDNNMmpWT0VYcDJyOEtTZ09XT1VkZU50NnBjRXBXNkRaeGQway9pdVIzRXZWOXRnTDV3TzNkM0lxSVhRcEVHUWs9`)
+
+            let key = localStorage.getItem("key");
+            if(key==null){
+                key = prompt("Decryption Key");
+                localStorage.setItem("key", key)
+            }
+            try{
+            var bytes = CryptoJS.AES.decrypt(code, key);
+            var originalText = bytes.toString(CryptoJS.enc.Utf8);
+            }catch(err){
+                alert("Invalid key provied!")
+                localStorage.clear()
+            }
+
+            let win = window.open("about:blank")
+            win.document.write(atob(originalText))
+        </script>
+</body>
+</html>
