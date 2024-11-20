@@ -39,7 +39,7 @@ html {
 
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   button{
     background-color: #545454;
   }
@@ -52,4 +52,4 @@ html {
   body{
   background-color:black;
 }
-}
+} */
