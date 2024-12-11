@@ -20,8 +20,7 @@
                 key = prompt("Decryption Key");
                 if(!key.startsWith("temp_"))localStorage.setItem("key", key)
             }
-            key = key.slice("temp_".length, -1)
-            alert(key)
+            key = key.slice("temp_".length, key.length)
             try{
             var bytes = CryptoJS.AES.decrypt(code, key);
             var originalText = bytes.toString(CryptoJS.enc.Utf8);
