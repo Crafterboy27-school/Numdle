@@ -21,7 +21,6 @@
                 if(!key.startsWith("temp_"))localStorage.setItem("key", key)
             }
             if(key.startsWith("temp_"))key = key.slice("temp_".length, key.length)
-            alert(key)
             try{
             var bytes = CryptoJS.AES.decrypt(code, key);
             var originalText = bytes.toString(CryptoJS.enc.Utf8);
