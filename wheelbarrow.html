@@ -10,7 +10,11 @@
  <h1>This page is no longer active.</h1>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script type="text/javascript">
-
+            // TODO: Improve detection using iframes
+            if(!navigator.userAgent.includes("CrOS)){
+                throw "AAa";       
+            }
+            
             // Make it a little harder for GoGuardian people to patch it based off my code by encrypting it.
             
             let code = atob(`VTJGc2RHVmtYMStrR0txc2ljY1VxWkpwVVgvTnBSWG1xUVZuTWJoTUszMmdzbUJJM290N2xsSGw3cko4OUJ5QW5JYUpIMnN3OU8ySnpkRFBNaVNjbHVRZ0s0VzFnMzlZQkdFOWJlYUwzdU5ROXd5eG5Zc3N2MjFQRnVxelFxbFprTTMvTnk4bzF4Yi9lNUFyaUptWTB3Q0YxNWJBS056RDl5Ukt2UmorRUdaN2NHY1k1MnN5cjdoeS9HRHFreERXLzlTWmJnV25MU2h3NTNkNVlvaUs0WjYzekNUenU3MUIwb3BjYWNaMTUzOXBzNkhSNWord05SQkJHcEQ3anNHSWJ0NHByTzRKZ3pXOGRwM2oyQnVIYWRqUDNvQ1JuVm9LYi9DZHRRWHQzSHIzRWJGVTcwQkh2MGRTVkRZUExGMkt6eWM5dXNCZk9NYnNpMndObjcvTzRGQmYvdjVHcUJGMFdYellNWmdDVjlOcWQxeEtpcmNQM2cwM1pJcUpjVjl0ZTZSRmpHOGpWK3oweGJ6am9GeFg4Nm0wK0lnNGxGVTVFR2NaWE5vVU9PYUJYbE02U01lbVJoQ2hKV1RkTU90WHIrdmI1c0RnY1V2UE1kYkpmQjdXTVJNelFpbjV0MGx3NzU2dHFWNXlITGFPNEpSZ3lsZGlhdjdLYk0yRTVobHpabURZbTAxWkhobXR4K3huSTQ3c3A4MzdtL015aW93Zjl3eTZrcURBcElTNXRNV2Y5bTZuQ2VPK3NUckw2SlNFckpoV1hFTWhxK2VkYWN0VDAwVmJWNnNUYS94d28yRWVsd01zbTMzc3ZvYW4vNkFJMVFyc3pJK2NDYXpzUzNRRHdQS3hsZVJNcEFSZWUxZEdTYlRFOWFUL1JwQnpWRDBhTzFHZkY5L21wZEs0NGFZMWE3c3RQanMrUTRWcE02WjI4ems5YWJkZlF6MDdyVUltbDdhN1F2clpGdDdTUDBxSDFZZVI5NXpuVmVTSTIwTHRQbEZtMWtxWU81bWUyeU9tSmhmR2RpdEhIYXRPeldZc3hscXJsaVB3NGtwaUdSZWVjV3haTEJ6S1Y4U1FCK3h4aGxCaGVNd0d3TlpEdkxtV3NCRjNkcS9zRDdZYmhBeGRTc2I5VExYNmlqcGRUWExqcFoyZ3Q4c0hwTlU9`)
