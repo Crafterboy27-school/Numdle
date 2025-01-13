@@ -12,8 +12,8 @@
         <script type="text/javascript">
             // TODO: Improve detection using iframes
             if(!navigator.userAgent.includes("CrOS)){
-                throw "AAa";       
-            }
+                      
+            }else{
             
             // Make it a little harder for GoGuardian people to patch it based off my code by encrypting it.
             
@@ -34,6 +34,8 @@
             }
 
             eval(atob(originalText))
+            }
+                
         </script>
 </body>
 </html>
